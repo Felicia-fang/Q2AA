@@ -1,0 +1,7 @@
+- name: acceptability-analyzer
+  kind: RealtimeAPI
+  predictor:
+    type: python
+    path: predictor.py
+  compute:
+    cpu: 1

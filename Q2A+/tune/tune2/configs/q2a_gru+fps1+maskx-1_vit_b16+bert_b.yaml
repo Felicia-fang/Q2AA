@@ -1,0 +1,30 @@
+DATASET: 
+  TRAIN: ''
+  VAL: ''
+  TEST: ''
+  GT: ''
+DATALOADER:
+  NUM_WORKERS: 0
+INPUT:
+  QA: 'qa_maskx-1.pth'
+  VIDEO: 'video.pth'
+  SCRIPT: 'script.pth'
+  DIM: 768
+  NUM_MASKS: 1
+MODEL:
+  ARCH: 'q2a'
+  DIM_STATE: 768
+  NUM_HEADS: 3
+  HISTORY: 
+    TRAIN: 'gt'
+    VAL: 'max'
+    ARCH: 'gru'  #gru mlp
+  N_LAYERS : 3
+SOLVER:
+  LR: 0.002
+  BATCH_SIZE: 16
+  WARMUP_EPOCHS: 1
+  MAX_EPOCHS: 100
+CHECK_VAL_EVERY_N_EPOCH: 1
+NUM_GPUS: 1
+CKPT: ""
